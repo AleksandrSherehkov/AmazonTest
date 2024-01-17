@@ -1,0 +1,1052 @@
+[
+  {
+    "campaignId": "1001",
+    "profileId": "100",
+    "clicks": 82,
+    "cost": 328.0,
+    "date": "2023-10-28"
+  },
+  {
+    "campaignId": "1002",
+    "profileId": "101",
+    "clicks": 273,
+    "cost": 972.0,
+    "date": "2023-06-02"
+  },
+  {
+    "campaignId": "1003",
+    "profileId": "102",
+    "clicks": 405,
+    "cost": 586.0,
+    "date": "2023-12-18"
+  },
+  {
+    "campaignId": "1004",
+    "profileId": "103",
+    "clicks": 208,
+    "cost": 456.0,
+    "date": "2023-02-05"
+  },
+  {
+    "campaignId": "1005",
+    "profileId": "104",
+    "clicks": 76,
+    "cost": 517.0,
+    "date": "2023-06-11"
+  },
+  {
+    "campaignId": "1006",
+    "profileId": "105",
+    "clicks": 87,
+    "cost": 325.0,
+    "date": "2023-02-09"
+  },
+  {
+    "campaignId": "1007",
+    "profileId": "106",
+    "clicks": 237,
+    "cost": 659.0,
+    "date": "2023-10-18"
+  },
+  {
+    "campaignId": "1008",
+    "profileId": "107",
+    "clicks": 295,
+    "cost": 597.0,
+    "date": "2023-06-16"
+  },
+  {
+    "campaignId": "1009",
+    "profileId": "108",
+    "clicks": 495,
+    "cost": 697.0,
+    "date": "2023-06-25"
+  },
+  {
+    "campaignId": "1010",
+    "profileId": "109",
+    "clicks": 201,
+    "cost": 393.0,
+    "date": "2023-03-08"
+  },
+  {
+    "campaignId": "1011",
+    "profileId": "110",
+    "clicks": 263,
+    "cost": 675.0,
+    "date": "2024-01-11"
+  },
+  {
+    "campaignId": "1012",
+    "profileId": "111",
+    "clicks": 173,
+    "cost": 594.0,
+    "date": "2023-05-09"
+  },
+  {
+    "campaignId": "1013",
+    "profileId": "112",
+    "clicks": 402,
+    "cost": 879.0,
+    "date": "2023-04-03"
+  },
+  {
+    "campaignId": "1014",
+    "profileId": "113",
+    "clicks": 184,
+    "cost": 856.0,
+    "date": "2023-09-09"
+  },
+  {
+    "campaignId": "1015",
+    "profileId": "114",
+    "clicks": 61,
+    "cost": 412.0,
+    "date": "2023-09-20"
+  },
+  {
+    "campaignId": "1016",
+    "profileId": "115",
+    "clicks": 210,
+    "cost": 617.0,
+    "date": "2023-11-14"
+  },
+  {
+    "campaignId": "1017",
+    "profileId": "116",
+    "clicks": 406,
+    "cost": 393.0,
+    "date": "2023-11-13"
+  },
+  {
+    "campaignId": "1018",
+    "profileId": "117",
+    "clicks": 429,
+    "cost": 515.0,
+    "date": "2023-11-01"
+  },
+  {
+    "campaignId": "1019",
+    "profileId": "118",
+    "clicks": 216,
+    "cost": 424.0,
+    "date": "2023-09-29"
+  },
+  {
+    "campaignId": "1020",
+    "profileId": "119",
+    "clicks": 109,
+    "cost": 619.0,
+    "date": "2023-01-30"
+  },
+  {
+    "campaignId": "1021",
+    "profileId": "120",
+    "clicks": 452,
+    "cost": 424.0,
+    "date": "2023-03-25"
+  },
+  {
+    "campaignId": "1022",
+    "profileId": "121",
+    "clicks": 168,
+    "cost": 757.0,
+    "date": "2023-02-23"
+  },
+  {
+    "campaignId": "1023",
+    "profileId": "122",
+    "clicks": 117,
+    "cost": 159.0,
+    "date": "2023-05-06"
+  },
+  {
+    "campaignId": "1024",
+    "profileId": "123",
+    "clicks": 417,
+    "cost": 232.0,
+    "date": "2023-06-04"
+  },
+  {
+    "campaignId": "1025",
+    "profileId": "124",
+    "clicks": 290,
+    "cost": 749.0,
+    "date": "2023-05-09"
+  },
+  {
+    "campaignId": "1026",
+    "profileId": "125",
+    "clicks": 68,
+    "cost": 224.0,
+    "date": "2023-02-05"
+  },
+  {
+    "campaignId": "1027",
+    "profileId": "126",
+    "clicks": 98,
+    "cost": 349.0,
+    "date": "2023-09-28"
+  },
+  {
+    "campaignId": "1028",
+    "profileId": "127",
+    "clicks": 231,
+    "cost": 992.0,
+    "date": "2023-07-31"
+  },
+  {
+    "campaignId": "1029",
+    "profileId": "128",
+    "clicks": 313,
+    "cost": 796.0,
+    "date": "2023-12-26"
+  },
+  {
+    "campaignId": "1030",
+    "profileId": "129",
+    "clicks": 351,
+    "cost": 801.0,
+    "date": "2023-10-30"
+  },
+  {
+    "campaignId": "1031",
+    "profileId": "130",
+    "clicks": 402,
+    "cost": 879.0,
+    "date": "2023-04-14"
+  },
+  {
+    "campaignId": "1032",
+    "profileId": "131",
+    "clicks": 173,
+    "cost": 692.0,
+    "date": "2023-12-08"
+  },
+  {
+    "campaignId": "1033",
+    "profileId": "132",
+    "clicks": 61,
+    "cost": 516.0,
+    "date": "2023-06-09"
+  },
+  {
+    "campaignId": "1034",
+    "profileId": "133",
+    "clicks": 415,
+    "cost": 809.0,
+    "date": "2023-08-13"
+  },
+  {
+    "campaignId": "1035",
+    "profileId": "134",
+    "clicks": 123,
+    "cost": 599.0,
+    "date": "2023-07-06"
+  },
+  {
+    "campaignId": "1036",
+    "profileId": "135",
+    "clicks": 187,
+    "cost": 673.0,
+    "date": "2023-10-21"
+  },
+  {
+    "campaignId": "1037",
+    "profileId": "136",
+    "clicks": 63,
+    "cost": 120.0,
+    "date": "2024-01-16"
+  },
+  {
+    "campaignId": "1038",
+    "profileId": "137",
+    "clicks": 482,
+    "cost": 386.0,
+    "date": "2023-10-22"
+  },
+  {
+    "campaignId": "1039",
+    "profileId": "138",
+    "clicks": 294,
+    "cost": 978.0,
+    "date": "2023-12-19"
+  },
+  {
+    "campaignId": "1040",
+    "profileId": "139",
+    "clicks": 119,
+    "cost": 384.0,
+    "date": "2023-08-28"
+  },
+  {
+    "campaignId": "1041",
+    "profileId": "140",
+    "clicks": 116,
+    "cost": 904.0,
+    "date": "2023-08-04"
+  },
+  {
+    "campaignId": "1042",
+    "profileId": "141",
+    "clicks": 375,
+    "cost": 214.0,
+    "date": "2023-06-19"
+  },
+  {
+    "campaignId": "1043",
+    "profileId": "142",
+    "clicks": 167,
+    "cost": 525.0,
+    "date": "2023-05-10"
+  },
+  {
+    "campaignId": "1044",
+    "profileId": "143",
+    "clicks": 179,
+    "cost": 560.0,
+    "date": "2023-02-25"
+  },
+  {
+    "campaignId": "1045",
+    "profileId": "144",
+    "clicks": 91,
+    "cost": 561.0,
+    "date": "2023-02-16"
+  },
+  {
+    "campaignId": "1046",
+    "profileId": "145",
+    "clicks": 479,
+    "cost": 232.0,
+    "date": "2023-12-26"
+  },
+  {
+    "campaignId": "1047",
+    "profileId": "146",
+    "clicks": 456,
+    "cost": 266.0,
+    "date": "2023-04-04"
+  },
+  {
+    "campaignId": "1048",
+    "profileId": "147",
+    "clicks": 344,
+    "cost": 426.0,
+    "date": "2023-09-25"
+  },
+  {
+    "campaignId": "1049",
+    "profileId": "148",
+    "clicks": 332,
+    "cost": 440.0,
+    "date": "2023-10-23"
+  },
+  {
+    "campaignId": "1050",
+    "profileId": "149",
+    "clicks": 424,
+    "cost": 661.0,
+    "date": "2023-07-20"
+  },
+  {
+    "campaignId": "1051",
+    "profileId": "150",
+    "clicks": 332,
+    "cost": 349.0,
+    "date": "2023-03-26"
+  },
+  {
+    "campaignId": "1052",
+    "profileId": "151",
+    "clicks": 241,
+    "cost": 564.0,
+    "date": "2023-04-20"
+  },
+  {
+    "campaignId": "1053",
+    "profileId": "152",
+    "clicks": 105,
+    "cost": 204.0,
+    "date": "2023-05-25"
+  },
+  {
+    "campaignId": "1054",
+    "profileId": "153",
+    "clicks": 443,
+    "cost": 264.0,
+    "date": "2023-12-28"
+  },
+  {
+    "campaignId": "1055",
+    "profileId": "154",
+    "clicks": 241,
+    "cost": 930.0,
+    "date": "2023-03-06"
+  },
+  {
+    "campaignId": "1056",
+    "profileId": "155",
+    "clicks": 140,
+    "cost": 934.0,
+    "date": "2023-09-01"
+  },
+  {
+    "campaignId": "1057",
+    "profileId": "156",
+    "clicks": 403,
+    "cost": 676.0,
+    "date": "2023-10-03"
+  },
+  {
+    "campaignId": "1058",
+    "profileId": "157",
+    "clicks": 285,
+    "cost": 475.0,
+    "date": "2023-11-28"
+  },
+  {
+    "campaignId": "1059",
+    "profileId": "158",
+    "clicks": 486,
+    "cost": 618.0,
+    "date": "2023-11-14"
+  },
+  {
+    "campaignId": "1060",
+    "profileId": "159",
+    "clicks": 238,
+    "cost": 971.0,
+    "date": "2023-08-31"
+  },
+  {
+    "campaignId": "1061",
+    "profileId": "160",
+    "clicks": 286,
+    "cost": 779.0,
+    "date": "2023-12-12"
+  },
+  {
+    "campaignId": "1062",
+    "profileId": "161",
+    "clicks": 216,
+    "cost": 809.0,
+    "date": "2023-11-26"
+  },
+  {
+    "campaignId": "1063",
+    "profileId": "162",
+    "clicks": 343,
+    "cost": 928.0,
+    "date": "2023-11-10"
+  },
+  {
+    "campaignId": "1064",
+    "profileId": "163",
+    "clicks": 56,
+    "cost": 277.0,
+    "date": "2023-09-09"
+  },
+  {
+    "campaignId": "1065",
+    "profileId": "164",
+    "clicks": 471,
+    "cost": 219.0,
+    "date": "2023-09-26"
+  },
+  {
+    "campaignId": "1066",
+    "profileId": "165",
+    "clicks": 437,
+    "cost": 944.0,
+    "date": "2023-05-14"
+  },
+  {
+    "campaignId": "1067",
+    "profileId": "166",
+    "clicks": 294,
+    "cost": 679.0,
+    "date": "2023-07-13"
+  },
+  {
+    "campaignId": "1068",
+    "profileId": "167",
+    "clicks": 369,
+    "cost": 595.0,
+    "date": "2023-09-19"
+  },
+  {
+    "campaignId": "1069",
+    "profileId": "168",
+    "clicks": 336,
+    "cost": 246.0,
+    "date": "2023-09-22"
+  },
+  {
+    "campaignId": "1070",
+    "profileId": "169",
+    "clicks": 451,
+    "cost": 336.0,
+    "date": "2023-11-16"
+  },
+  {
+    "campaignId": "1071",
+    "profileId": "170",
+    "clicks": 440,
+    "cost": 970.0,
+    "date": "2023-12-30"
+  },
+  {
+    "campaignId": "1072",
+    "profileId": "171",
+    "clicks": 300,
+    "cost": 922.0,
+    "date": "2023-05-02"
+  },
+  {
+    "campaignId": "1073",
+    "profileId": "172",
+    "clicks": 78,
+    "cost": 397.0,
+    "date": "2023-02-05"
+  },
+  {
+    "campaignId": "1074",
+    "profileId": "173",
+    "clicks": 124,
+    "cost": 998.0,
+    "date": "2023-02-05"
+  },
+  {
+    "campaignId": "1075",
+    "profileId": "174",
+    "clicks": 482,
+    "cost": 390.0,
+    "date": "2023-03-02"
+  },
+  {
+    "campaignId": "1076",
+    "profileId": "175",
+    "clicks": 206,
+    "cost": 701.0,
+    "date": "2023-12-25"
+  },
+  {
+    "campaignId": "1077",
+    "profileId": "176",
+    "clicks": 377,
+    "cost": 904.0,
+    "date": "2023-03-11"
+  },
+  {
+    "campaignId": "1078",
+    "profileId": "177",
+    "clicks": 275,
+    "cost": 337.0,
+    "date": "2023-08-30"
+  },
+  {
+    "campaignId": "1079",
+    "profileId": "178",
+    "clicks": 334,
+    "cost": 650.0,
+    "date": "2023-04-24"
+  },
+  {
+    "campaignId": "1080",
+    "profileId": "179",
+    "clicks": 115,
+    "cost": 339.0,
+    "date": "2023-12-11"
+  },
+  {
+    "campaignId": "1081",
+    "profileId": "180",
+    "clicks": 165,
+    "cost": 979.0,
+    "date": "2023-09-03"
+  },
+  {
+    "campaignId": "1082",
+    "profileId": "181",
+    "clicks": 177,
+    "cost": 536.0,
+    "date": "2023-07-09"
+  },
+  {
+    "campaignId": "1083",
+    "profileId": "182",
+    "clicks": 129,
+    "cost": 331.0,
+    "date": "2023-12-25"
+  },
+  {
+    "campaignId": "1084",
+    "profileId": "183",
+    "clicks": 130,
+    "cost": 758.0,
+    "date": "2023-08-23"
+  },
+  {
+    "campaignId": "1085",
+    "profileId": "184",
+    "clicks": 237,
+    "cost": 857.0,
+    "date": "2024-01-12"
+  },
+  {
+    "campaignId": "1086",
+    "profileId": "185",
+    "clicks": 254,
+    "cost": 497.0,
+    "date": "2023-02-27"
+  },
+  {
+    "campaignId": "1087",
+    "profileId": "186",
+    "clicks": 296,
+    "cost": 318.0,
+    "date": "2023-10-25"
+  },
+  {
+    "campaignId": "1088",
+    "profileId": "187",
+    "clicks": 348,
+    "cost": 761.0,
+    "date": "2023-08-23"
+  },
+  {
+    "campaignId": "1089",
+    "profileId": "188",
+    "clicks": 483,
+    "cost": 561.0,
+    "date": "2023-05-13"
+  },
+  {
+    "campaignId": "1090",
+    "profileId": "189",
+    "clicks": 179,
+    "cost": 437.0,
+    "date": "2023-06-30"
+  },
+  {
+    "campaignId": "1091",
+    "profileId": "190",
+    "clicks": 224,
+    "cost": 440.0,
+    "date": "2023-04-18"
+  },
+  {
+    "campaignId": "1092",
+    "profileId": "191",
+    "clicks": 72,
+    "cost": 948.0,
+    "date": "2023-11-12"
+  },
+  {
+    "campaignId": "1093",
+    "profileId": "192",
+    "clicks": 84,
+    "cost": 652.0,
+    "date": "2023-01-20"
+  },
+  {
+    "campaignId": "1094",
+    "profileId": "193",
+    "clicks": 378,
+    "cost": 775.0,
+    "date": "2023-11-27"
+  },
+  {
+    "campaignId": "1095",
+    "profileId": "194",
+    "clicks": 413,
+    "cost": 854.0,
+    "date": "2023-01-27"
+  },
+  {
+    "campaignId": "1096",
+    "profileId": "195",
+    "clicks": 399,
+    "cost": 468.0,
+    "date": "2023-03-08"
+  },
+  {
+    "campaignId": "1097",
+    "profileId": "196",
+    "clicks": 257,
+    "cost": 345.0,
+    "date": "2023-12-18"
+  },
+  {
+    "campaignId": "1098",
+    "profileId": "197",
+    "clicks": 442,
+    "cost": 174.0,
+    "date": "2023-06-22"
+  },
+  {
+    "campaignId": "1099",
+    "profileId": "198",
+    "clicks": 149,
+    "cost": 297.0,
+    "date": "2023-05-24"
+  },
+  {
+    "campaignId": "1100",
+    "profileId": "199",
+    "clicks": 238,
+    "cost": 321.0,
+    "date": "2023-10-06"
+  },
+  {
+    "campaignId": "1101",
+    "profileId": "200",
+    "clicks": 388,
+    "cost": 685.0,
+    "date": "2023-11-29"
+  },
+  {
+    "campaignId": "1102",
+    "profileId": "201",
+    "clicks": 451,
+    "cost": 183.0,
+    "date": "2023-12-30"
+  },
+  {
+    "campaignId": "1103",
+    "profileId": "202",
+    "clicks": 435,
+    "cost": 506.0,
+    "date": "2023-11-25"
+  },
+  {
+    "campaignId": "1104",
+    "profileId": "203",
+    "clicks": 218,
+    "cost": 491.0,
+    "date": "2023-01-22"
+  },
+  {
+    "campaignId": "1105",
+    "profileId": "204",
+    "clicks": 77,
+    "cost": 581.0,
+    "date": "2023-05-10"
+  },
+  {
+    "campaignId": "1106",
+    "profileId": "205",
+    "clicks": 392,
+    "cost": 502.0,
+    "date": "2023-10-07"
+  },
+  {
+    "campaignId": "1107",
+    "profileId": "206",
+    "clicks": 190,
+    "cost": 311.0,
+    "date": "2023-02-01"
+  },
+  {
+    "campaignId": "1108",
+    "profileId": "207",
+    "clicks": 311,
+    "cost": 673.0,
+    "date": "2023-10-28"
+  },
+  {
+    "campaignId": "1109",
+    "profileId": "208",
+    "clicks": 231,
+    "cost": 591.0,
+    "date": "2023-04-04"
+  },
+  {
+    "campaignId": "1110",
+    "profileId": "209",
+    "clicks": 299,
+    "cost": 708.0,
+    "date": "2023-10-25"
+  },
+  {
+    "campaignId": "1111",
+    "profileId": "210",
+    "clicks": 479,
+    "cost": 533.0,
+    "date": "2023-09-20"
+  },
+  {
+    "campaignId": "1112",
+    "profileId": "211",
+    "clicks": 148,
+    "cost": 545.0,
+    "date": "2023-08-27"
+  },
+  {
+    "campaignId": "1113",
+    "profileId": "212",
+    "clicks": 257,
+    "cost": 300.0,
+    "date": "2023-05-21"
+  },
+  {
+    "campaignId": "1114",
+    "profileId": "213",
+    "clicks": 78,
+    "cost": 679.0,
+    "date": "2023-02-11"
+  },
+  {
+    "campaignId": "1115",
+    "profileId": "214",
+    "clicks": 484,
+    "cost": 572.0,
+    "date": "2023-04-15"
+  },
+  {
+    "campaignId": "1116",
+    "profileId": "215",
+    "clicks": 445,
+    "cost": 300.0,
+    "date": "2023-05-25"
+  },
+  {
+    "campaignId": "1117",
+    "profileId": "216",
+    "clicks": 244,
+    "cost": 385.0,
+    "date": "2023-02-23"
+  },
+  {
+    "campaignId": "1118",
+    "profileId": "217",
+    "clicks": 456,
+    "cost": 120.0,
+    "date": "2023-12-19"
+  },
+  {
+    "campaignId": "1119",
+    "profileId": "218",
+    "clicks": 365,
+    "cost": 442.0,
+    "date": "2023-08-29"
+  },
+  {
+    "campaignId": "1120",
+    "profileId": "219",
+    "clicks": 403,
+    "cost": 983.0,
+    "date": "2023-11-26"
+  },
+  {
+    "campaignId": "1121",
+    "profileId": "220",
+    "clicks": 232,
+    "cost": 382.0,
+    "date": "2024-01-16"
+  },
+  {
+    "campaignId": "1122",
+    "profileId": "221",
+    "clicks": 115,
+    "cost": 588.0,
+    "date": "2023-02-27"
+  },
+  {
+    "campaignId": "1123",
+    "profileId": "222",
+    "clicks": 55,
+    "cost": 717.0,
+    "date": "2023-12-17"
+  },
+  {
+    "campaignId": "1124",
+    "profileId": "223",
+    "clicks": 250,
+    "cost": 150.0,
+    "date": "2023-09-18"
+  },
+  {
+    "campaignId": "1125",
+    "profileId": "224",
+    "clicks": 313,
+    "cost": 876.0,
+    "date": "2023-04-18"
+  },
+  {
+    "campaignId": "1126",
+    "profileId": "225",
+    "clicks": 424,
+    "cost": 149.0,
+    "date": "2023-06-27"
+  },
+  {
+    "campaignId": "1127",
+    "profileId": "226",
+    "clicks": 288,
+    "cost": 371.0,
+    "date": "2023-10-27"
+  },
+  {
+    "campaignId": "1128",
+    "profileId": "227",
+    "clicks": 125,
+    "cost": 516.0,
+    "date": "2023-09-12"
+  },
+  {
+    "campaignId": "1129",
+    "profileId": "228",
+    "clicks": 254,
+    "cost": 129.0,
+    "date": "2023-10-30"
+  },
+  {
+    "campaignId": "1130",
+    "profileId": "229",
+    "clicks": 221,
+    "cost": 130.0,
+    "date": "2023-10-23"
+  },
+  {
+    "campaignId": "1131",
+    "profileId": "230",
+    "clicks": 260,
+    "cost": 466.0,
+    "date": "2023-12-10"
+  },
+  {
+    "campaignId": "1132",
+    "profileId": "231",
+    "clicks": 359,
+    "cost": 120.0,
+    "date": "2023-07-27"
+  },
+  {
+    "campaignId": "1133",
+    "profileId": "232",
+    "clicks": 280,
+    "cost": 915.0,
+    "date": "2023-08-31"
+  },
+  {
+    "campaignId": "1134",
+    "profileId": "233",
+    "clicks": 328,
+    "cost": 973.0,
+    "date": "2023-09-01"
+  },
+  {
+    "campaignId": "1135",
+    "profileId": "234",
+    "clicks": 138,
+    "cost": 262.0,
+    "date": "2023-03-21"
+  },
+  {
+    "campaignId": "1136",
+    "profileId": "235",
+    "clicks": 488,
+    "cost": 430.0,
+    "date": "2023-11-21"
+  },
+  {
+    "campaignId": "1137",
+    "profileId": "236",
+    "clicks": 431,
+    "cost": 652.0,
+    "date": "2023-07-17"
+  },
+  {
+    "campaignId": "1138",
+    "profileId": "237",
+    "clicks": 445,
+    "cost": 529.0,
+    "date": "2023-02-09"
+  },
+  {
+    "campaignId": "1139",
+    "profileId": "238",
+    "clicks": 367,
+    "cost": 302.0,
+    "date": "2023-07-03"
+  },
+  {
+    "campaignId": "1140",
+    "profileId": "239",
+    "clicks": 173,
+    "cost": 752.0,
+    "date": "2023-12-25"
+  },
+  {
+    "campaignId": "1141",
+    "profileId": "240",
+    "clicks": 217,
+    "cost": 352.0,
+    "date": "2023-05-12"
+  },
+  {
+    "campaignId": "1142",
+    "profileId": "241",
+    "clicks": 168,
+    "cost": 486.0,
+    "date": "2023-07-10"
+  },
+  {
+    "campaignId": "1143",
+    "profileId": "242",
+    "clicks": 432,
+    "cost": 365.0,
+    "date": "2023-02-21"
+  },
+  {
+    "campaignId": "1144",
+    "profileId": "243",
+    "clicks": 241,
+    "cost": 342.0,
+    "date": "2023-02-05"
+  },
+  {
+    "campaignId": "1145",
+    "profileId": "244",
+    "clicks": 88,
+    "cost": 560.0,
+    "date": "2023-12-17"
+  },
+  {
+    "campaignId": "1146",
+    "profileId": "245",
+    "clicks": 322,
+    "cost": 660.0,
+    "date": "2023-12-08"
+  },
+  {
+    "campaignId": "1147",
+    "profileId": "246",
+    "clicks": 197,
+    "cost": 777.0,
+    "date": "2023-11-24"
+  },
+  {
+    "campaignId": "1148",
+    "profileId": "247",
+    "clicks": 237,
+    "cost": 256.0,
+    "date": "2023-01-28"
+  },
+  {
+    "campaignId": "1149",
+    "profileId": "248",
+    "clicks": 193,
+    "cost": 542.0,
+    "date": "2023-05-01"
+  },
+  {
+    "campaignId": "1150",
+    "profileId": "249",
+    "clicks": 489,
+    "cost": 409.0,
+    "date": "2023-06-23"
+  }
+]

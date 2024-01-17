@@ -1,3 +1,13 @@
+import AccountsPage from './page/AccountsPage';
+import ProfilesPage from './page/ProfilesPage';
+import CampaignsPage from './page/СampaignsPage';
+
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <AccountsPage />
+      <ProfilesPage />
+      <CampaignsPage />
+    </div>
+  );
 };
