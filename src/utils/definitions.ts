@@ -1,10 +1,25 @@
 export interface Account {
-  [key: string]: string;
+  accountId: string;
+  email: string;
+  authToken: string;
+  creationDate: string;
+  Profiles: Profile[];
 }
 
 export interface Profile {
-  [key: string]: string;
+  profileId: string;
+  country: string;
+  marketplace: string;
+  Campaigns: Campaign[];
 }
+
 export interface Campaign {
-  [key: string]: string | number;
+  campaignId: string;
+  clicks: number;
+  cost: number;
+  date: string;
+}
+
+export interface Data {
+  Accounts: Account[];
 }
