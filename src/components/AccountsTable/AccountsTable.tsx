@@ -1,11 +1,10 @@
-import { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// AccountsTable.tsx
+import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
 import { BiSortAlt2 } from 'react-icons/bi';
-
 import rawData from '../../data/data.json';
 import { Account, Data } from '../../utils/definitions';
-
 import { Title } from '../Title/Title';
+import { useNavigate } from 'react-router-dom';
 
 const columnHeaders: { label: string; sortKey: keyof Account }[] = [
   { label: 'Account ID', sortKey: 'accountId' },
@@ -16,44 +15,14 @@ const columnHeaders: { label: string; sortKey: keyof Account }[] = [
 
 export const AccountsTable = () => {
   const navigate = useNavigate();
-  const [data] = useState<Data>(rawData as Data);
-  const [sortConfig, setSortConfig] = useState<{
-    key: string;
-    direction: 'ascending' | 'descending';
-  } | null>(null);
-  const [filterText, setFilterText] = useState('');
+  const data: Data = rawData as Data;
 
-  const sortedData = useMemo(() => {
-    const sortableItems = [...data.Accounts];
-    if (sortConfig !== null) {
-      sortableItems.sort((a, b) => {
-        const keyA = a[sortConfig.key as keyof Account];
-        const keyB = b[sortConfig.key as keyof Account];
-        if (keyA < keyB) {
-          return sortConfig.direction === 'ascending' ? -1 : 1;
-        }
-        if (keyA > keyB) {
-          return sortConfig.direction === 'ascending' ? 1 : -1;
-        }
-        return 0;
-      });
-    }
-    return sortableItems;
-  }, [data, sortConfig]);
-
-  const filteredData = sortedData.filter(account => {
-    return Object.values(account).some(value =>
-      value.toString().toLowerCase().includes(filterText.toLowerCase())
-    );
-  });
-
-  const requestSort = (key: keyof Account) => {
-    let direction: 'ascending' | 'descending' = 'ascending';
-    if (sortConfig && sortConfig.key === key) {
-      direction = sortConfig.direction === 'ascending' ? 'descending' : 'ascending';
-    }
-    setSortConfig({ key, direction });
-  };
+  const {
+    items: sortedAndFilteredAccounts,
+    requestSort,
+    setFilterText,
+    filterText,
+  } = useSortableAndFilterableData<Account>(data.Accounts);
 
   const handleRowClick = (accountId: string) => {
     navigate(`/profiles/${accountId}`);
@@ -72,7 +41,7 @@ export const AccountsTable = () => {
       <div className="overflow-x-auto relative">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr className="">
+            <tr>
               {columnHeaders.map(({ label, sortKey }) => (
                 <th
                   key={label}
@@ -80,16 +49,16 @@ export const AccountsTable = () => {
                   className="py-3 px-6 cursor-pointer"
                   onClick={() => requestSort(sortKey)}
                 >
-                  <span className="flex gap-2">
+                  <span className="flex gap-x-2 ">
                     {label}
-                    <BiSortAlt2 className="" />
+                    <BiSortAlt2 />
                   </span>
                 </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {filteredData.map(account => (
+            {sortedAndFilteredAccounts.map(account => (
               <tr
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-200 focus:bg-gray-200"
                 key={account.accountId}

@@ -1,12 +1,17 @@
-import { useNavigate, useParams } from 'react-router-dom';
+// ProfilesTable.tsx
 import { useEffect, useState } from 'react';
-
+import { useNavigate, useParams } from 'react-router-dom';
 import rawData from '../../data/data.json';
 import { Data, Profile } from '../../utils/definitions';
-
 import { Title } from '../Title/Title';
+import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
+import { BiSortAlt2 } from 'react-icons/bi';
 
-const columnHeaders = ['Profile Id', 'Country', 'Marketplace'];
+const columnHeaders: { label: string; sortKey: keyof Profile }[] = [
+  { label: 'Profile Id', sortKey: 'profileId' },
+  { label: 'Country', sortKey: 'country' },
+  { label: 'Marketplace', sortKey: 'marketplace' },
+];
 
 export const ProfilesTable = () => {
   const { accountId } = useParams();
@@ -23,26 +28,48 @@ export const ProfilesTable = () => {
     }
   }, [accountId, data.Accounts]);
 
+  const {
+    items: sortedAndFilteredProfiles,
+    requestSort,
+    setFilterText,
+    filterText,
+  } = useSortableAndFilterableData(profiles);
+
   const handleRowClick = (profileId: string) => {
     navigate(`/campaigns/${profileId}`);
   };
 
   return (
-    <>
+    <div className="p-8">
       <Title title={`Profiles of Account ${accountId}`} />
+      <input
+        type="text"
+        placeholder="Filter profiles..."
+        value={filterText}
+        onChange={e => setFilterText(e.target.value)}
+        className="mb-4 border-2 outline-none"
+      />
       <div className="overflow-x-auto relative">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              {columnHeaders.map(header => (
-                <th key={header} scope="col" className="py-3 px-6">
-                  {header}
+              {columnHeaders.map(({ label, sortKey }) => (
+                <th
+                  key={label}
+                  scope="col"
+                  className="py-3 px-6 cursor-pointer"
+                  onClick={() => requestSort(sortKey)}
+                >
+                  <span className="flex gap-x-2 ">
+                    {label}
+                    <BiSortAlt2 />
+                  </span>
                 </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {profiles.map(profile => (
+            {sortedAndFilteredProfiles.map(profile => (
               <tr
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-200 focus:bg-gray-200"
                 key={profile.profileId}
@@ -57,6 +84,6 @@ export const ProfilesTable = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
