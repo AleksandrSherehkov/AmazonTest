@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BiSortAlt2 } from 'react-icons/bi';
 
 import { usePagination } from '../../hooks/usePagination';
@@ -14,10 +14,12 @@ import rawData from '../../data/data.json';
 import { Pagination } from '../Pagination/Pagination';
 import { Title } from '../Title/Title';
 import { DataCounter } from '../DataCounter/DataCounter';
+import { ButtonBack } from '../ButtonBack/ButtonBack';
 
 export const CampaignsTable = () => {
   const { profileId } = useParams();
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
+  const navigate = useNavigate();
 
   const data: Data = rawData as Data;
 
@@ -51,8 +53,13 @@ export const CampaignsTable = () => {
     ITEMS_PER_PAGE
   );
 
+  const handleBackClick = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="p-8 bg-gray-200 w-full">
+      <ButtonBack handleBackClick={handleBackClick} />
       <DataCounter totalItems={totalItems} viewedStart={viewedStart} viewedEnd={viewedEnd} />
       <Title title={`Campaigns of Profile ${profileId}`} />
       <input

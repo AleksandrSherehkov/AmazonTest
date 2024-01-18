@@ -14,9 +14,12 @@ import rawData from '../../data/data.json';
 import { Title } from '../Title/Title';
 import { Pagination } from '../Pagination/Pagination';
 import { DataCounter } from '../DataCounter/DataCounter';
+import { ButtonBack } from '../ButtonBack/ButtonBack';
 
 export const ProfilesTable = () => {
   const { accountId } = useParams();
+  console.log(`accountId:`, accountId);
+
   const navigate = useNavigate();
   const [profiles, setProfiles] = useState<Profile[]>([]);
   const data: Data = rawData as Data;
@@ -54,9 +57,13 @@ export const ProfilesTable = () => {
   const handleRowClick = (profileId: string) => {
     navigate(`/accounts/profiles/campaigns/${profileId}`);
   };
+  const handleBackClick = () => {
+    navigate(-1);
+  };
 
   return (
     <div className="p-8 bg-gray-200 w-full">
+      <ButtonBack handleBackClick={handleBackClick} />
       <DataCounter totalItems={totalItems} viewedStart={viewedStart} viewedEnd={viewedEnd} />
       <Title title={`Profiles of Account ${accountId}`} />
       <input
