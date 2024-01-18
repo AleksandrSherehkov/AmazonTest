@@ -56,7 +56,7 @@ export const ProfilesTable = () => {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-8 bg-gray-200 w-full">
       <DataCounter totalItems={totalItems} viewedStart={viewedStart} viewedEnd={viewedEnd} />
       <Title title={`Profiles of Account ${accountId}`} />
       <input
@@ -66,9 +66,9 @@ export const ProfilesTable = () => {
         onChange={e => setFilterText(e.target.value)}
         className="mb-4 border-2 outline-none"
       />
-      <div className="overflow-x-auto relative">
+      <div className="overflow-x-auto relative mb-8">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               {columnHeadersProfiles.map(({ label, sortKey }) => (
                 <th

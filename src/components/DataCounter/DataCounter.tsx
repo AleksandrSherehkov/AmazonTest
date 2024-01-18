@@ -8,7 +8,7 @@ interface DataCounterProps {
 
 export const DataCounter: FC<DataCounterProps> = ({ totalItems, viewedStart, viewedEnd }) => {
   return (
-    <div className="mt-4 flex justify-between items-center">
+    <div className="w-full flex justify-between items-center mb-10">
       <p>Total Items: {totalItems}</p>
       <p>
         Viewing {viewedStart} - {viewedEnd} of {totalItems}

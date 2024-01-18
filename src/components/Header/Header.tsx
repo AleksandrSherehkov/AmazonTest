@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 export const Header = () => {
   return (
     <div className="bg-gray-800 text-white p-4">
-      <p className="text-xl mb-4 text-center">Test task "Tables"</p>
       <nav>
         <ul className="flex space-x-4">
           <li>

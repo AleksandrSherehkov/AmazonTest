@@ -5,14 +5,14 @@ import { Header } from '../Header/Header';
 
 const SharedLayout = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main>
+      <main className=" flex flex-auto">
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
       </main>
-    </>
+    </div>
   );
 };
 

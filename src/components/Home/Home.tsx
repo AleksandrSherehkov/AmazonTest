@@ -1,7 +1,7 @@
 export const Home = () => {
   return (
-    <div className="p-8 bg-gray-200">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="p-8 bg-gray-200 w-full  flex justify-center items-center">
+      <div className="max-w-4xl mx-auto  bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="py-4 px-8">
           <h2 className="text-2xl font-semibold text-gray-800">Тестове завдання "Таблиці"</h2>
           <div className="mt-4 text-gray-600">
