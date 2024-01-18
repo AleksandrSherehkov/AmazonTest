@@ -42,7 +42,7 @@ export const AccountsTable = () => {
   );
 
   const handleRowClick = (accountId: string) => {
-    navigate(`/profiles/${accountId}`);
+    navigate(`/accounts/profiles/${accountId}`);
   };
 
   return (

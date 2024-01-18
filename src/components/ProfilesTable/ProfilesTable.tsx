@@ -52,7 +52,7 @@ export const ProfilesTable = () => {
   );
 
   const handleRowClick = (profileId: string) => {
-    navigate(`/campaigns/${profileId}`);
+    navigate(`/accounts/profiles/campaigns/${profileId}`);
   };
 
   return (
