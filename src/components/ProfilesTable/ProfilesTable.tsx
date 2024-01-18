@@ -18,7 +18,6 @@ import { ButtonBack } from '../ButtonBack/ButtonBack';
 
 export const ProfilesTable = () => {
   const { accountId } = useParams();
-  console.log(`accountId:`, accountId);
 
   const navigate = useNavigate();
   const [profiles, setProfiles] = useState<Profile[]>([]);
