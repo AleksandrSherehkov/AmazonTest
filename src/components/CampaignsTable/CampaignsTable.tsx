@@ -4,6 +4,7 @@ import { BiSortAlt2 } from 'react-icons/bi';
 
 import { usePagination } from '../../hooks/usePagination';
 import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
+import { useDataCounter } from '../../hooks/useDataCounter';
 import { Data, Campaign } from '../../utils/definitions';
 import { columnHeadersCampaigns } from '../../utils/tableHeaderSortData';
 
@@ -12,6 +13,7 @@ import rawData from '../../data/data.json';
 
 import { Pagination } from '../Pagination/Pagination';
 import { Title } from '../Title/Title';
+import { DataCounter } from '../DataCounter/DataCounter';
 
 export const CampaignsTable = () => {
   const { profileId } = useParams();
@@ -34,13 +36,24 @@ export const CampaignsTable = () => {
     filterText,
   } = useSortableAndFilterableData(campaigns);
 
-  const { currentData, currentPage, maxPage, jump } = usePagination(
+  const { currentData, currentPage, maxPage, jump, setCurrentPage } = usePagination(
     sortedAndFilteredCampaigns,
+    ITEMS_PER_PAGE
+  );
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [sortedAndFilteredCampaigns, setCurrentPage]);
+
+  const { totalItems, viewedStart, viewedEnd } = useDataCounter(
+    sortedAndFilteredCampaigns,
+    currentPage,
     ITEMS_PER_PAGE
   );
 
   return (
     <div className="p-8 min-h-">
+      <DataCounter totalItems={totalItems} viewedStart={viewedStart} viewedEnd={viewedEnd} />
       <Title title={`Campaigns of Profile ${profileId}`} />
       <input
         type="text"

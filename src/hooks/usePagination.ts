@@ -24,5 +24,5 @@ export function usePagination<T>(data: T[], itemsPerPage: number) {
     setCurrentPage(() => Math.min(pageNumber, maxPage));
   }
 
-  return { next, prev, jump, currentData, currentPage, maxPage };
+  return { next, prev, jump, currentData, currentPage, setCurrentPage, maxPage };
 }

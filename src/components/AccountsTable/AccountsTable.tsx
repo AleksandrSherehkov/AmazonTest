@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BiSortAlt2 } from 'react-icons/bi';
 
 import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
 import { usePagination } from '../../hooks/usePagination';
+import { useDataCounter } from '../../hooks/useDataCounter';
 import { Account, Data } from '../../utils/definitions';
 import { columnHeadersAccounts } from '../../utils/tableHeaderSortData';
 
@@ -11,6 +13,7 @@ import { ITEMS_PER_PAGE } from '../../constants/paginationConstants';
 
 import { Pagination } from '../Pagination/Pagination';
 import { Title } from '../Title/Title';
+import { DataCounter } from '../DataCounter/DataCounter';
 
 export const AccountsTable = () => {
   const navigate = useNavigate();
@@ -23,17 +26,28 @@ export const AccountsTable = () => {
     filterText,
   } = useSortableAndFilterableData<Account>(data.Accounts);
 
-  const { currentData, currentPage, maxPage, jump } = usePagination(
+  const { currentData, currentPage, maxPage, jump, setCurrentPage } = usePagination(
     sortedAndFilteredAccounts,
     ITEMS_PER_PAGE
   );
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [sortedAndFilteredAccounts, setCurrentPage]);
+
+  const { totalItems, viewedStart, viewedEnd } = useDataCounter(
+    sortedAndFilteredAccounts,
+    currentPage,
+    ITEMS_PER_PAGE
+  );
+
   const handleRowClick = (accountId: string) => {
-    navigate(`/accounts/profiles/${accountId}`);
+    navigate(`/profiles/${accountId}`);
   };
 
   return (
-    <div className="p-8 ">
+    <div className="p-8">
+      <DataCounter totalItems={totalItems} viewedStart={viewedStart} viewedEnd={viewedEnd} />
       <Title title="Accounts" />
       <input
         type="text"
@@ -42,7 +56,7 @@ export const AccountsTable = () => {
         onChange={e => setFilterText(e.target.value)}
         className="mb-4 border-2 outline-none"
       />
-      <div className="overflow-x-auto relative flex-grow">
+      <div className="overflow-x-auto relative">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>

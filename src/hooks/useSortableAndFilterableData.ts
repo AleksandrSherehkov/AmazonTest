@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useDeferredValue } from 'react';
 
 type SortDirection = 'ascending' | 'descending';
 type SortConfig<T> = { key: keyof T; direction: SortDirection } | null;
@@ -9,6 +9,8 @@ export const useSortableAndFilterableData = <T extends Record<keyof T, unknown>>
 ) => {
   const [sortConfig, setSortConfig] = useState<SortConfig<T>>(defaultSortConfig);
   const [filterText, setFilterText] = useState('');
+
+  const debouncedFilterText = useDeferredValue(filterText);
 
   const sortedAndFilteredItems = useMemo(() => {
     const sortableItems = [...items];
@@ -35,12 +37,11 @@ export const useSortableAndFilterableData = <T extends Record<keyof T, unknown>>
 
     return sortableItems.filter(item => {
       return Object.values(item).some(value => {
-        // Проверяем, не является ли значение null или undefined, перед сравнением
         const valueStr = value !== null && value !== undefined ? String(value).toLowerCase() : '';
-        return valueStr.includes(filterText.toLowerCase());
+        return valueStr.includes(debouncedFilterText.toLowerCase());
       });
     });
-  }, [items, sortConfig, filterText]);
+  }, [items, sortConfig, debouncedFilterText]);
 
   const requestSort = (key: keyof T) => {
     let direction: SortDirection = 'ascending';

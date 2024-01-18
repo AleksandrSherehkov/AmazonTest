@@ -4,6 +4,7 @@ import { BiSortAlt2 } from 'react-icons/bi';
 
 import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
 import { usePagination } from '../../hooks/usePagination';
+import { useDataCounter } from '../../hooks/useDataCounter';
 import { Data, Profile } from '../../utils/definitions';
 import { columnHeadersProfiles } from '../../utils/tableHeaderSortData';
 
@@ -12,6 +13,7 @@ import rawData from '../../data/data.json';
 
 import { Title } from '../Title/Title';
 import { Pagination } from '../Pagination/Pagination';
+import { DataCounter } from '../DataCounter/DataCounter';
 
 export const ProfilesTable = () => {
   const { accountId } = useParams();
@@ -35,17 +37,27 @@ export const ProfilesTable = () => {
     filterText,
   } = useSortableAndFilterableData(profiles);
 
-  const { currentData, currentPage, maxPage, jump } = usePagination(
+  const { currentData, currentPage, maxPage, jump, setCurrentPage } = usePagination(
     sortedAndFilteredProfiles,
+    ITEMS_PER_PAGE
+  );
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [sortedAndFilteredProfiles, setCurrentPage]);
+
+  const { totalItems, viewedStart, viewedEnd } = useDataCounter(
+    sortedAndFilteredProfiles,
+    currentPage,
     ITEMS_PER_PAGE
   );
 
   const handleRowClick = (profileId: string) => {
-    navigate(`campaigns/${profileId}`);
+    navigate(`/campaigns/${profileId}`);
   };
 
   return (
     <div className="p-8">
+      <DataCounter totalItems={totalItems} viewedStart={viewedStart} viewedEnd={viewedEnd} />
       <Title title={`Profiles of Account ${accountId}`} />
       <input
         type="text"
