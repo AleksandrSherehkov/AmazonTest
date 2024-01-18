@@ -1,21 +1,22 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import rawData from '../../data/data.json';
-import { Data, Campaign } from '../../utils/definitions';
-import { Title } from '../Title/Title';
-import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
 import { BiSortAlt2 } from 'react-icons/bi';
 
-const columnHeaders: { label: string; sortKey: keyof Campaign }[] = [
-  { label: 'Campaign Id', sortKey: 'campaignId' },
-  { label: 'Clicks', sortKey: 'clicks' },
-  { label: 'Cost', sortKey: 'cost' },
-  { label: 'Date', sortKey: 'date' },
-];
+import { usePagination } from '../../hooks/usePagination';
+import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
+import { Data, Campaign } from '../../utils/definitions';
+import { columnHeadersCampaigns } from '../../utils/tableHeaderSortData';
+
+import { ITEMS_PER_PAGE } from '../../constants/paginationConstants';
+import rawData from '../../data/data.json';
+
+import { Pagination } from '../Pagination/Pagination';
+import { Title } from '../Title/Title';
 
 export const CampaignsTable = () => {
   const { profileId } = useParams();
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
+
   const data: Data = rawData as Data;
 
   useEffect(() => {
@@ -33,8 +34,13 @@ export const CampaignsTable = () => {
     filterText,
   } = useSortableAndFilterableData(campaigns);
 
+  const { currentData, currentPage, maxPage, jump } = usePagination(
+    sortedAndFilteredCampaigns,
+    ITEMS_PER_PAGE
+  );
+
   return (
-    <div className="p-8">
+    <div className="p-8 min-h-">
       <Title title={`Campaigns of Profile ${profileId}`} />
       <input
         type="text"
@@ -47,14 +53,14 @@ export const CampaignsTable = () => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              {columnHeaders.map(({ label, sortKey }) => (
+              {columnHeadersCampaigns.map(({ label, sortKey }) => (
                 <th
                   key={label}
                   scope="col"
                   className="py-3 px-6 cursor-pointer"
                   onClick={() => requestSort(sortKey)}
                 >
-                  <span className="flex gap-x-2 ">
+                  <span className="flex gap-x-2">
                     {label}
                     <BiSortAlt2 />
                   </span>
@@ -63,10 +69,11 @@ export const CampaignsTable = () => {
             </tr>
           </thead>
           <tbody>
-            {sortedAndFilteredCampaigns.map(campaign => (
+            {currentData().map(campaign => (
               <tr
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-100 focus:bg-gray-100 transition"
                 key={campaign.campaignId}
+                tabIndex={0}
               >
                 <td className="py-4 px-6">{campaign.campaignId}</td>
                 <td className="py-4 px-6">{campaign.clicks}</td>
@@ -77,6 +84,7 @@ export const CampaignsTable = () => {
           </tbody>
         </table>
       </div>
+      <Pagination pageCount={maxPage} goToPage={jump} currentPage={currentPage} />
     </div>
   );
 };

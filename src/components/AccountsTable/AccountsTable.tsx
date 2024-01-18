@@ -1,17 +1,16 @@
-// AccountsTable.tsx
-import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
-import { BiSortAlt2 } from 'react-icons/bi';
-import rawData from '../../data/data.json';
-import { Account, Data } from '../../utils/definitions';
-import { Title } from '../Title/Title';
 import { useNavigate } from 'react-router-dom';
+import { BiSortAlt2 } from 'react-icons/bi';
 
-const columnHeaders: { label: string; sortKey: keyof Account }[] = [
-  { label: 'Account ID', sortKey: 'accountId' },
-  { label: 'Email', sortKey: 'email' },
-  { label: 'Auth Token', sortKey: 'authToken' },
-  { label: 'Creation Date', sortKey: 'creationDate' },
-];
+import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
+import { usePagination } from '../../hooks/usePagination';
+import { Account, Data } from '../../utils/definitions';
+import { columnHeadersAccounts } from '../../utils/tableHeaderSortData';
+
+import rawData from '../../data/data.json';
+import { ITEMS_PER_PAGE } from '../../constants/paginationConstants';
+
+import { Pagination } from '../Pagination/Pagination';
+import { Title } from '../Title/Title';
 
 export const AccountsTable = () => {
   const navigate = useNavigate();
@@ -24,12 +23,17 @@ export const AccountsTable = () => {
     filterText,
   } = useSortableAndFilterableData<Account>(data.Accounts);
 
+  const { currentData, currentPage, maxPage, jump } = usePagination(
+    sortedAndFilteredAccounts,
+    ITEMS_PER_PAGE
+  );
+
   const handleRowClick = (accountId: string) => {
-    navigate(`/profiles/${accountId}`);
+    navigate(`/accounts/profiles/${accountId}`);
   };
 
   return (
-    <div className="p-8">
+    <div className="p-8 ">
       <Title title="Accounts" />
       <input
         type="text"
@@ -38,18 +42,18 @@ export const AccountsTable = () => {
         onChange={e => setFilterText(e.target.value)}
         className="mb-4 border-2 outline-none"
       />
-      <div className="overflow-x-auto relative">
+      <div className="overflow-x-auto relative flex-grow">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              {columnHeaders.map(({ label, sortKey }) => (
+              {columnHeadersAccounts.map(({ label, sortKey }) => (
                 <th
                   key={label}
                   scope="col"
                   className="py-3 px-6 cursor-pointer"
                   onClick={() => requestSort(sortKey)}
                 >
-                  <span className="flex gap-x-2 ">
+                  <span className="flex gap-x-2">
                     {label}
                     <BiSortAlt2 />
                   </span>
@@ -58,7 +62,7 @@ export const AccountsTable = () => {
             </tr>
           </thead>
           <tbody>
-            {sortedAndFilteredAccounts.map(account => (
+            {currentData().map(account => (
               <tr
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-200 focus:bg-gray-200"
                 key={account.accountId}
@@ -74,6 +78,7 @@ export const AccountsTable = () => {
           </tbody>
         </table>
       </div>
+      <Pagination pageCount={maxPage} goToPage={jump} currentPage={currentPage} />
     </div>
   );
 };

@@ -1,17 +1,17 @@
-// ProfilesTable.tsx
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import rawData from '../../data/data.json';
-import { Data, Profile } from '../../utils/definitions';
-import { Title } from '../Title/Title';
-import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
 import { BiSortAlt2 } from 'react-icons/bi';
 
-const columnHeaders: { label: string; sortKey: keyof Profile }[] = [
-  { label: 'Profile Id', sortKey: 'profileId' },
-  { label: 'Country', sortKey: 'country' },
-  { label: 'Marketplace', sortKey: 'marketplace' },
-];
+import { useSortableAndFilterableData } from '../../hooks/useSortableAndFilterableData';
+import { usePagination } from '../../hooks/usePagination';
+import { Data, Profile } from '../../utils/definitions';
+import { columnHeadersProfiles } from '../../utils/tableHeaderSortData';
+
+import { ITEMS_PER_PAGE } from '../../constants/paginationConstants';
+import rawData from '../../data/data.json';
+
+import { Title } from '../Title/Title';
+import { Pagination } from '../Pagination/Pagination';
 
 export const ProfilesTable = () => {
   const { accountId } = useParams();
@@ -35,8 +35,13 @@ export const ProfilesTable = () => {
     filterText,
   } = useSortableAndFilterableData(profiles);
 
+  const { currentData, currentPage, maxPage, jump } = usePagination(
+    sortedAndFilteredProfiles,
+    ITEMS_PER_PAGE
+  );
+
   const handleRowClick = (profileId: string) => {
-    navigate(`/campaigns/${profileId}`);
+    navigate(`campaigns/${profileId}`);
   };
 
   return (
@@ -53,7 +58,7 @@ export const ProfilesTable = () => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              {columnHeaders.map(({ label, sortKey }) => (
+              {columnHeadersProfiles.map(({ label, sortKey }) => (
                 <th
                   key={label}
                   scope="col"
@@ -69,7 +74,7 @@ export const ProfilesTable = () => {
             </tr>
           </thead>
           <tbody>
-            {sortedAndFilteredProfiles.map(profile => (
+            {currentData().map(profile => (
               <tr
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-200 focus:bg-gray-200"
                 key={profile.profileId}
@@ -84,6 +89,7 @@ export const ProfilesTable = () => {
           </tbody>
         </table>
       </div>
+      <Pagination pageCount={maxPage} goToPage={jump} currentPage={currentPage} />
     </div>
   );
 };
