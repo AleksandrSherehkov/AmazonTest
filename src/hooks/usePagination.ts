@@ -1,28 +1,28 @@
 import { useState } from 'react';
 
-export function usePagination<T>(data: T[], itemsPerPage: number) {
+export const usePagination = <T>(data: T[], itemsPerPage: number) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const maxPage = Math.ceil(data.length / itemsPerPage);
 
-  function currentData() {
+  const currentData = () => {
     const begin = (currentPage - 1) * itemsPerPage;
     const end = begin + itemsPerPage;
     return data.slice(begin, end);
-  }
+  };
 
-  function next() {
+  const next = () => {
     setCurrentPage(currentPage => Math.min(currentPage + 1, maxPage));
-  }
+  };
 
-  function prev() {
+  const prev = () => {
     setCurrentPage(currentPage => Math.max(currentPage - 1, 1));
-  }
+  };
 
-  function jump(page: number) {
+  const jump = (page: number) => {
     const pageNumber = Math.max(1, page);
     setCurrentPage(() => Math.min(pageNumber, maxPage));
-  }
+  };
 
   return { next, prev, jump, currentData, currentPage, setCurrentPage, maxPage };
-}
+};
